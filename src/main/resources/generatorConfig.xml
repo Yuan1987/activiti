@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+	<classPathEntry
+		location="D:/sqljdbc4-4.0.jar" />
+
+	<!-- 容器模块数据库 -->
+	<context id="container">
+		<jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+			connectionURL="jdbc:sqlserver://192.168.20.91:1433;DatabaseName=CETC"
+			userId="sqladmin" password="2016@dongu" />
+		<javaModelGenerator targetPackage="com.dynastech.model.entity2"
+			targetProject="cetc" />
+		<sqlMapGenerator targetPackage="com.dynastech.model.mapper2"
+			targetProject="cetc" />
+		<javaClientGenerator targetPackage="com.dynastech.model.mapper2"
+			targetProject="cetc" type="XMLMAPPER" />
+
+		<table schema="" tableName="t_ability_evaluate" alias="pae" enableSelectByExample="true" 
+			domainObjectName="PersonAbilityEvaluate"
+			>
+		</table>
+		
+	</context>
+
+</generatorConfiguration>
